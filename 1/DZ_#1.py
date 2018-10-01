@@ -48,12 +48,14 @@
 """
 3. Определить, какие из слов «attribute», «класс», «функция», «type» невозможно записать в байтовом типе.
 """
-# w = ["attribute", "класс", "функция", "type"]
-# for i in range(len(w)):
-#     print(w[i].encode('utf-8'))
-#     convert_w = "b'{0}'".format(w[i])
-#     if w[i].encode('utf-8') == convert_w:
-#         print('НЕЛЬЗЯ')
+w = ["attribute", "класс", "функция", "type"]
+for i in range(len(w)):
+
+    convert_w = "b'{0}'".format(w[i])
+    if str(w[i].encode('utf-8')) == str(convert_w):
+        print('НЕЛЬЗЯ')
+    else:
+        print(w[i].encode('utf-8'))
 
 
 """
